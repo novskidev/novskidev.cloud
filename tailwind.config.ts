@@ -1,4 +1,3 @@
-import { Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -12,11 +11,19 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        mindaro: "#D9ED92",
+        light_green: "#B5E48C",
+        light_green_2: "#99D98C",
+        emerald: "#76C893",
+        kappel: "#52B69A",
+        verdigris: "#34A0A4",
+        bondi_blue: "#168AAD",
+        cerulean: "#1A759F",
       },
       fontFamily: {
-        Roboto: ["var(--font-roboto)", "sans-serif"],
-        Pally: ["var(--font-pally)", "monospace"],
-        Boldpally : ["var(--font-pally-bold)", "monospace"],
+        roboto: ["var(--font-roboto)"],
+        pally: ["var(--font-pally)", "monospace"],
+        boldpally : ["var(--font-pally-bold)", "monospace"],
       },
     },
   },
