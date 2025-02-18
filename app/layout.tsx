@@ -4,8 +4,8 @@ import {roboto, myPally, myPallyBold} from "@/app/utils/fonts"
 import Navbar from "./components/navbar";
 
 export const metadata: Metadata = {
-  title: "Novskidev",
-  description: "Novian Developer Portofolio",
+  title: "Novskidev.cloud - Personal Portofolio Website",
+  description: "Portofolio Website to Share my Ideas",
 };
 
 export default function RootLayout({
