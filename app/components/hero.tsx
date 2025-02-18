@@ -1,4 +1,4 @@
-import profilpic from "../../public/images/5-29-removebg-preview.png"
+import profilpic from "../../public/images/Diva_18022025.png"
 import Image from "next/image";
 
 function Hero() {

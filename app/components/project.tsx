@@ -10,7 +10,6 @@ function Projects() {
                 </p>
             </div>
 
-            {/* Tambahkan grid untuk menampilkan cards dengan rapi */}
             <div className="flex gap-4 flex-wrap items-center justify-center mb-[80px] w-8/12">
                 {Project.map((project) => (
                     <Card

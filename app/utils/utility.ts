@@ -1,6 +1,4 @@
 
-
-
 type menuNav = {
     id: number,
     title: string,
@@ -41,43 +39,42 @@ export const Project: projectType = [
         key: 1,
         title: "Novskidev",
         description: "Novian Developer Portfolio",
-        imageSrc: "/novskidev.png",
+        imageSrc: "/images/portofolio.png",
         link: "https://github.com/novskidev/novskidev",
     },
     {
         key: 2,
         title: "VanLife App",
         description: "Renting Travel Vans Application created with React.Js, TailwindCSS, and React Route V6",
-        imageSrc: "/secondproject.png",
+        imageSrc: "/images/vanapp.png",
         link: "https://github.com/novskidev/VanlifeApp",
     },
     {
         key: 3,
         title: "Weather App",
         description: "A weather forecast web app built with Next.js and TailwindCSS.",
-        imageSrc: "/weatherapp.png",
+        imageSrc: "/images/weatherapp.png",
         link: "https://github.com/novskidev/simple-weather-app",
     },
     {
         key: 4,
         title: "Quizzical App",
         description: "Education Media for Student created using React.js and Tailwind.css",
-        imageSrc: "/taskmanager.png",
+        imageSrc: "/images/quizzicalapp.png",
         link: "https://github.com/novskidev/Quizzical-App",
     },
     {
         key: 5,
         title: "Nike Landing Page",
         description: "A landing page for Nike website.",
-        imageSrc: "/ecommerce.png",
+        imageSrc: "/images/nikelanding.png",
         link: "https://github.com/novskidev/nike-landingpage",
     },
     {
         key: 6,
         title: "Tenzies game",
         description: "A game powered by react.js.",
-        imageSrc: "/aichatbot.png",
+        imageSrc: "/images/tenziez.png",
         link: "https://github.com/novskidev/TenziesGame",
     },
-    
 ];

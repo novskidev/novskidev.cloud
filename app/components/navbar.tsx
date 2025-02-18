@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { menu } from '../utils/utility';
-import profilpic from "../../public/images/5-29-removebg-preview.png"
+import profilpic from "../../public/images/Diva_18022025.png"
 import Image from 'next/image';
 
 export default function Navbar() {

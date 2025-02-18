@@ -7,10 +7,10 @@ import arrow from "@/public/icon/tabler-icon-arrow-narrow-right.png";
 
 function Card({ title, description, imageSrc, link }: projectType[number]) {
   return (
-    <article className="w-[220px] h-[200px] md:w-[320px] md:h-[300px] bg-white rounded-3xl flex flex-col justify-between p-5 shadow-md">
+    <article className="w-[220px] h-[200px] md:w-[320px] md:h-[300px] bg-white rounded-3xl flex flex-col justify-between p-5 shadow-md overflow-hidden">
       <div>
         <h1 className="text-verdigris font-roboto font-semibold text-lg">{title}</h1>
-        <p className="font-roboto text-xs sm:text-sm md:text-base lg:text-md text-[#838383]">{description}</p>
+        <p className="font-roboto text-xs py-2 sm:text-sm md:text-base lg:text-md text-[#838383]">{description}</p>
       </div>
 
       <Link href={link}>
@@ -20,7 +20,7 @@ function Card({ title, description, imageSrc, link }: projectType[number]) {
         </button>
       </Link>
 
-      <Image src={imageSrc} alt={title} width={200} height={200} className="self-center" />
+      <Image src={imageSrc} alt={title} width={380} height={215} className=" hidden sm:block ml-16 mt-9 object-cover rounded-2xl rotate-[-32deg]" />
     </article>
   );
 }
