@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./style/globals.css";
+import {roboto, myPally, myPallyBold} from "@/app/utils/fonts"
 
 export const metadata: Metadata = {
   title: "Novskidev",
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased`}
+        className={` ${roboto.variable} ${myPally.variable} ${myPallyBold.variable} antialiased`}
       >
         {children}
       </body>
