@@ -7,7 +7,7 @@ import arrow from "@/public/icon/tabler-icon-arrow-narrow-right.png";
 
 function Card({ title, description, imageSrc, link }: projectType[number]) {
   return (
-    <article className="w-[220px] h-[200px] md:w-[320px] md:h-[300px] bg-white dark:bg-[#1A1A1A] rounded-3xl flex flex-col justify-between p-5 shadow-md overflow-hidden transition-all duration-300">
+    <article className="w-[220px] h-[200px] md:w-[320px] md:h-[300px] sm:w-[280px] sm:h-[260px] bg-white dark:bg-[#1A1A1A] rounded-3xl flex flex-col justify-between p-5 shadow-md overflow-hidden transition-all duration-300">
       <div>
         <h1 className="text-verdigris font-roboto font-semibold text-lg dark:text-[#56D3A8]">
           {title}

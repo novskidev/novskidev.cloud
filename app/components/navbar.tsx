@@ -18,16 +18,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 w-full h-[64px] bg-white dark:bg-gray-900 shadow-md z-50 p-4 font-roboto`}>
+    <nav className={`fixed top-0 w-full h-[64px] bg-white dark:bg-black shadow-md z-50 p-4 font-roboto`}>
       <div className=" mx-auto flex justify-between items-center gap-3">
-        {/* Logo */}
         <div className='flex gap-2 items-center'>
         <Image src={profilpic} alt="Profile Picture" className="bg-gradient-to-r from-[#99D98C] to-[#34A0A4] w-10 h-10 rounded-full object-cover" />
-        <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4] font-pally">
+        <div className="text-base sm:text-xl md:text-2xl lg:6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4] font-pally">
           Novskidev
         </div>
         </div>
-        {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 flex-grow justify-end">
           {menu.map((item) => (
             <a
@@ -40,7 +38,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Dark Mode Button & Mobile Menu Button */}
         <div className="flex items-center gap-4">
           <button onClick={toggleDarkMode} className="p-2 rounded-full">
             {isDarkMode ? (
@@ -56,7 +53,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex w-full flex-col mt-4 rounded-md space-y-4 p-4 bg-white dark:bg-gray-900">
           {menu.map((item) => (

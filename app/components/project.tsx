@@ -8,7 +8,7 @@ function Projects() {
         <h1 className="font-pally text-left text-wrap font-bold text-6xl text-white dark:text-[#56D3A8] transition-all duration-300">
           Projects
         </h1>
-        <p className="font-roboto text-white dark:text-[#E4E4E4] text-xs md:text-sm lg:text-base text-wrap text-left py-2 transition-all duration-300">
+        <p className="font-roboto text-white dark:text-[#E4E4E4] text-xs sm:text-sm md:text-base text-wrap text-left py-2 transition-all duration-300">
           Open-source projects I've made over the years, including this website, games, and apps.
         </p>
       </div>

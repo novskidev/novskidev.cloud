@@ -13,6 +13,14 @@ export type projectType = {
     link: string;
 }[];
 
+export type articleType = {
+    key: number;
+    title: string;
+    date: string;
+    description: string;
+    link: string;
+}[];
+
 
 
 export const menu: menuNav[] = [
@@ -77,4 +85,29 @@ export const Project: projectType = [
         imageSrc: "/images/tenziez.png",
         link: "https://github.com/novskidev/TenziesGame",
     },
+];
+
+
+export const article: articleType = [
+    {
+        key: 1,
+        title: "Complete Guide to Learning Next.js for Beginners",
+        date: "2025-02-19",
+        description: "A comprehensive guide on how to get started with Next.js and build modern web applications.",
+        link: "https://example.com/nextjs-guide"
+    },
+    {
+        key: 2,
+        title: "Introduction to TypeScript: Benefits and How to Use It",
+        date: "2024-11-18",
+        description: "Learn the advantages of using TypeScript and how to implement it in your projects.",
+        link: "https://example.com/typescript-intro"
+    },
+    {
+        key: 3,
+        title: "How to Become a Fullstack Developer in 6 Months?",
+        date: "2025-01-10",
+        description: "A roadmap to help you transition into a fullstack developer within six months.",
+        link: "https://example.com/fullstack-roadmap"
+    }
 ];
