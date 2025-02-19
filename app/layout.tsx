@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import "./style/globals.css";
 import {roboto, myPally, myPallyBold} from "@/app/utils/fonts"
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Novskidev.cloud - Personal Portofolio Website",
   description: "Portofolio Website to Share my Ideas",
+  icons: {
+    icon: '/app/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +24,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

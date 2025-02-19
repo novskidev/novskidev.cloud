@@ -31,8 +31,8 @@ export const menu: menuNav[] = [
     },
     {
         id: 2,
-        title: "Article",
-        path: "/about",
+        title: "Articles",
+        path: "/articles",
     },
     {
         id: 3,

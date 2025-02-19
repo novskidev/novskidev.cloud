@@ -8,13 +8,13 @@ function Footer() {
            <div>
            <section className='flex justify-between py-3'>
             <Link href={'https://www.instagram.com/novskidev/'}>
-            <Instagram className='text-xs sm:text-sm md:text-base dark:text-[#E4E4E4]'/>
+            <Instagram className='text-xs sm:text-sm md:text-base hover:scale-125 transition-all duration-300 dark:text-[#E4E4E4]'/>
             </Link>
             <Link href={'https://github.com/novskidev'}>
-            <Github className='text-xs sm:text-sm md:text-base dark:text-[#E4E4E4]'/>
+            <Github className='text-xs sm:text-sm md:text-base hover:scale-125 transition-all duration-300 dark:text-[#E4E4E4]'/>
             </Link>
             <Link href={'https://www.linkedin.com/in/noviann/'}>
-            <Linkedin className='text-xs sm:text-sm md:text-base dark:text-[#E4E4E4]'/>
+            <Linkedin className='text-xs sm:text-sm md:text-base hover:scale-125 transition-all duration-300 dark:text-[#E4E4E4]'/>
             </Link>
             </section> 
             <p className="text-xs sm:text-sm md:text-base font-roboto text-semibold dark:text-[#E4E4E4]"> Created By Novian ©{new Date().getFullYear()} </p>

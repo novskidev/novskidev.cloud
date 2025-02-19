@@ -16,7 +16,7 @@ function Hero() {
                     Helping businesses and individuals solve problems with clean code, <br className="hidden sm:block"/> 
                     innovative solutions, and engaging education.
                 </p>
-                <div className="flex flex-wrap justify-center items-center gap-3 text-lg md:text-base sm:text-sm font-medium text-[#272727] dark:text-gray-300">
+                <div className="flex flex-wrap font-roboto justify-center items-center gap-3 text-lg md:text-base sm:text-sm font-medium text-[#272727] dark:text-gray-300">
                     <h3>+3 Years Experience</h3>
                     <span className="hidden sm:inline">|</span>
                     <h3>5+ Projects</h3>

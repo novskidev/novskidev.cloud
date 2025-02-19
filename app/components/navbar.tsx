@@ -21,7 +21,6 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full h-[64px] bg-white dark:bg-black shadow-md z-50 p-4 font-roboto`}>
       <div className=" mx-auto flex justify-between items-center gap-3">
         <div className='flex gap-2 items-center'>
-        <Image src={profilpic} alt="Profile Picture" className="bg-gradient-to-r from-[#99D98C] to-[#34A0A4] w-10 h-10 rounded-full object-cover" />
         <div className="text-base sm:text-xl md:text-2xl lg:6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4] font-pally">
           Novskidev
         </div>
@@ -38,7 +37,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 hover:scale-125 transition-all duration-300">
           <button onClick={toggleDarkMode} className="p-2 rounded-full">
             {isDarkMode ? (
               <Sun size={20} className="text-yellow-400" />

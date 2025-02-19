@@ -18,7 +18,7 @@ function Card({ title, description, imageSrc, link }: projectType[number]) {
       </div>
 
       <Link href={link}>
-        <button className="flex items-center my-1 gap border-2 border-verdigris text-verdigris dark:border-[#56D3A8] dark:text-[#56D3A8] font-roboto text-xs font-light rounded-full px-3 py-1 transition-all duration-300 hover:bg-verdigris hover:text-white dark:hover:bg-[#56D3A8] dark:hover:text-black">
+        <button className="flex hover:scale-110 items-center my-1 gap border-2 border-verdigris text-verdigris dark:border-[#56D3A8] dark:text-[#56D3A8] font-roboto text-xs font-light rounded-full px-3 py-1 transition-all duration-300 hover:bg-verdigris hover:text-white dark:hover:bg-[#56D3A8] dark:hover:text-black">
           Visit
           <Image src={arrow} alt="arrow" width={16} height={16} />
         </button>
