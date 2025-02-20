@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { menu } from '../utils/utility';
-import profilpic from "../../public/images/Diva_18022025.png"
-import Image from 'next/image';
+import Link from 'next/link';
+
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,24 +23,27 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full h-[64px] bg-white dark:bg-black shadow-md z-50 p-4 font-roboto`}>
       <div className=" mx-auto flex justify-between items-center gap-3">
         <div className='flex gap-2 items-center'>
-        <div className="text-base sm:text-xl md:text-2xl lg:6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4] font-pally">
+          <Link href={'/'}>
+          <div className="text-base sm:text-xl md:text-2xl lg:6xl hover:scale-110 transition-all duration-300 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4] font-pally">
           Novskidev
         </div>
+          </Link>
+        
         </div>
         <div className="hidden md:flex gap-6 flex-grow justify-end">
           {menu.map((item) => (
-            <a
+            <Link
               key={item.id}
-              href={`#${item.title.toLowerCase()}`}
-              className="font-semibold text-base text-gray-900 dark:text-white hover:scale-110 dark:hover:scale-110 transition duration-300 ease-in-out"
+              href={`${item.path}`}
+              className={`font-semibold text-base text-gray-900 dark:text-white hover:scale-110 dark:hover:scale-110 transition duration-300 ease-in-out ${pathname === item.path ? 'text-verdigris' : ''}`}
             >
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
 
-        <div className="flex items-center gap-4 hover:scale-125 transition-all duration-300">
-          <button onClick={toggleDarkMode} className="p-2 rounded-full">
+        <div className="flex items-center gap-4 ">
+          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:scale-125 transition-all duration-300">
             {isDarkMode ? (
               <Sun size={20} className="text-yellow-400" />
             ) : (
@@ -46,7 +51,7 @@ export default function Navbar() {
             )}
           </button>
 
-          <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden p-2 hover:scale-125 transition-all duration-300" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} className="text-gray-900 dark:text-white" /> : <Menu size={24} className="text-gray-900 dark:text-white" />}
           </button>
         </div>
@@ -55,13 +60,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden flex w-full flex-col mt-4 rounded-md space-y-4 p-4 bg-white dark:bg-gray-900">
           {menu.map((item) => (
-            <a
+            <Link
               key={item.id}
-              href={`#${item.title.toLowerCase()}`}
-              className="text-gray-900 dark:text-white hover:underline dark:hover:underline transition duration-300 ease-in-out"
+              href={`${item.path}`}
+              className={`text-gray-900 dark:text-white hover:underline dark:hover:underline transition duration-300 ease-in-out ${pathname === item.path ? 'text-verdigris' : ''}`}
+              onClick={() => setIsOpen(false)}
             >
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
       )}

@@ -26,8 +26,8 @@ export type articleType = {
 export const menu: menuNav[] = [
     {
         id: 1,
-        title: "Project",
-        path: "/project",
+        title: "Projects",
+        path: "/projects",
     },
     {
         id: 2,
@@ -94,20 +94,69 @@ export const article: articleType = [
         title: "Complete Guide to Learning Next.js for Beginners",
         date: "2025-02-19",
         description: "A comprehensive guide on how to get started with Next.js and build modern web applications.",
-        link: "https://example.com/nextjs-guide"
+        link: "#"
     },
     {
         key: 2,
         title: "Introduction to TypeScript: Benefits and How to Use It",
         date: "2024-11-18",
         description: "Learn the advantages of using TypeScript and how to implement it in your projects.",
-        link: "https://example.com/typescript-intro"
+        link: "#"
     },
     {
         key: 3,
         title: "How to Become a Fullstack Developer in 6 Months?",
-        date: "2025-01-10",
+        date: "2024-10-10",
         description: "A roadmap to help you transition into a fullstack developer within six months.",
-        link: "https://example.com/fullstack-roadmap"
+        link: "#"
+    },
+    {
+        key: 4,
+        title: "Understanding React Hooks: A Beginner's Guide",
+        date: "2024-09-22",
+        description: "A simple explanation of React Hooks and how to use them effectively.",
+        link: "#"
+    },
+    {
+        key: 5,
+        title: "Best Practices for Writing Clean and Maintainable Code",
+        date: "2024-08-15",
+        description: "Learn how to write clean and maintainable code to improve collaboration and scalability.",
+        link: "#"
+    },
+    {
+        key: 6,
+        title: "Getting Started with Tailwind CSS for Modern UI Design",
+        date: "2024-07-30",
+        description: "A step-by-step guide on using Tailwind CSS to create beautiful user interfaces.",
+        link: "#"
+    },
+    {
+        key: 7,
+        title: "Why You Should Learn Python for Data Science?",
+        date: "2024-06-12",
+        description: "An overview of Python’s importance in data science and how to get started.",
+        link: "#"
+    },
+    {
+        key: 8,
+        title: "Mastering Git and GitHub: Essential Commands for Developers",
+        date: "2024-05-25",
+        description: "A detailed guide to Git and GitHub commands every developer should know.",
+        link: "#"
+    },
+    {
+        key: 9,
+        title: "Understanding API Development with Node.js and Express",
+        date: "2024-04-10",
+        description: "Learn how to build and deploy RESTful APIs using Node.js and Express.",
+        link: "#"
+    },
+    {
+        key: 10,
+        title: "How to Deploy Web Applications for Free in 2025",
+        date: "2024-03-18",
+        description: "A list of the best free hosting platforms for deploying web applications in 2025.",
+        link: "#"
     }
 ];

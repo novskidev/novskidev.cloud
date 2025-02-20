@@ -2,7 +2,7 @@ import ArticleList from "./ui/articleList";
 import { article } from "../utils/utility";
 
 
-const formatDate = (dateString: string) => {
+export const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-EN", { year: "numeric", month: "long" });
   };
@@ -13,8 +13,9 @@ function Articles() {
             <div className="w-8/12 my-[50px] mx-[264px]">
                 <h1 className="font-pally font-bold text-6xl text-verdigris dark:text-[#56D3A8]">Articles</h1>
                 <p className="font-roboto text-sm sm:text-base md:text-base text-wrap text-left my-2 dark:text-[#E4E4E4]">Guides, references, life and tutorials written by me.</p>
-                <div className="mt-12">
-                {article.map((article) => (
+                <h2 className="text-xl underline dark:text-white font-bold mb-3">Latest Articles</h2>
+                <div className="mt-7">
+                {article.slice(0,3).map((article) => (
                     <ArticleList
                         key={article.key}
                         title={article.title}

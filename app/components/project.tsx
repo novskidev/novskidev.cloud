@@ -13,7 +13,7 @@ function Projects() {
         </p>
       </div>
 
-      <div className="flex gap-4 flex-wrap items-center justify-center mb-[80px] w-8/12 ">
+      <div className="flex gap-4 flex-wrap items-center justify-center mb-[80px] w-10/12 ">
         {Project.map((project) => (
           <Card
             key={project.key}
