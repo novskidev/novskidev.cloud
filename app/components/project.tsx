@@ -9,7 +9,7 @@ function Projects() {
           Projects
         </h1>
         <p className="font-roboto text-white dark:text-[#E4E4E4] text-xs sm:text-sm md:text-base text-wrap text-left py-2 transition-all duration-300">
-          Open-source projects I've made over the years, including this website, games, and apps.
+          Open-source projects I&apos;ve made over the years, including this website, games, and apps.
         </p>
       </div>
 

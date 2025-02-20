@@ -7,7 +7,7 @@ function Hero() {
             <Image src={profilpic} alt="Profile Picture" className="bg-gradient-to-r from-[#99D98C] to-[#34A0A4] mt-16 w-40 h-40 lg:w-60 lg:h-60 rounded-full object-cover" />
             <div className="flex flex-col items-center text-center gap-4 max-w-3xl">
                 <h1 className="font-extrabold text-4xl md:text-6xl font-pally p-2 dark:text-white text-center leading-tight">
-                    Hi, I'm <span className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4]">Novian</span>👋
+                    Hi, I&apos;m <span className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4]">Novian</span>👋
                 </h1>
                 <p className="font-roboto font-semibold text-md text-wrap lg:text-xl md:text-lg p-2 dark:text-gray-300">
                     A Passionate Software Engineer, <br className="hidden sm:block"/> Educator and Coffee Sipper ☕
@@ -25,7 +25,6 @@ function Hero() {
                 </div>
             </div>
 
-            {/* Background Blur Elements */}
             <div className="fixed left-[-100px] top-1/4 w-[250px] h-[250px] blur-[200px] rounded-full bg-light_green dark:bg-[#99D98C]/50"></div>
             <div className="fixed right-[-100px] bottom-1/4 w-[350px] h-[350px] blur-[300px] rounded-full bg-verdigris dark:bg-[#34A0A4]/50"></div>
         </section>
