@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 
 interface PageProps {
   params: {
@@ -60,7 +61,12 @@ export async function generateStaticParams() {
     }));
 }
 
-async function ArticlePage({ params }: PageProps) {
+type Props = {
+  params: { slug: string }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+async function ArticlePage({ params }: Props) {
   const slug = params.slug;
   const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
