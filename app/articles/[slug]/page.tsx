@@ -10,6 +10,22 @@ interface PageProps {
   };
 }
 
+// Add these interfaces at the top of your file
+interface ArticleMeta {
+  title: string;
+  date: string;
+  description: string;
+  slug: string;
+  author: string;
+  category: string;
+  tags: string[];
+}
+
+interface ArticleContent {
+  meta: ArticleMeta;
+  content: string;
+}
+
 // Fungsi untuk memformat tanggal
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString('en-US', {

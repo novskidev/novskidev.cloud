@@ -85,6 +85,20 @@ export const Project: projectType = [
         imageSrc: "/images/tenziez.png",
         link: "https://github.com/novskidev/TenziesGame",
     },
+    {
+        key: 7,
+        title: "Mendingmana Apps",
+        description: "Choice-making app using Ai to help people make decisions",
+        imageSrc: "/images/blogs/Mending-mana.png",
+        link: "https://github.com/novskidev/Mendingmana-Apps",
+    }, 
+    {
+        key: 8,
+        title: "MaxGPT landing page",
+        description: "A landing page for MaxGPT",
+        imageSrc: "/images/max-gpt.png",
+        link: "https://github.com/novskidev/maxgpt.id",
+    },
 ];
 
 
