@@ -31,7 +31,7 @@ export default function ArticlesPage() {
   };
 
   return (
-    <div className="mt-5 w-8/12 ">
+    <div className="mt-5 w-8/12 mx-auto">
       {articles.slice(0, visibleCount).map((article) => (
         <ArticleList
           key={article.slug}
