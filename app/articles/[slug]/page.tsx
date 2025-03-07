@@ -60,7 +60,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function ArticlePage({ params }: PageProps) {
+async function ArticlePage({ params }: PageProps) {
   const slug = params.slug;
   const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -81,3 +81,5 @@ export default async function ArticlePage({ params }: PageProps) {
     </article>
   );
 }
+
+export default ArticlePage;
