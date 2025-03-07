@@ -3,13 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
+
 
 // Add these interfaces at the top of your file
 interface ArticleMeta {
@@ -61,13 +56,17 @@ export async function generateStaticParams() {
     }));
 }
 
-type Props = {
-  params: { slug: string }
-  searchParams?: { [key: string]: string | string[] | undefined }
+type ArticlePageProps = {
+  params: Promise<{ slug: string }> | { slug: string }
 }
 
-async function ArticlePage({ params }: Props) {
-  const slug = params.slug;
+export default async function ArticlePage({ 
+  params 
+}: ArticlePageProps) {
+  // If params is a Promise, await it
+  const resolvedParams = await Promise.resolve(params);
+  
+  const slug = resolvedParams.slug;
   const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { content, data } = matter(fileContent);
@@ -87,5 +86,3 @@ async function ArticlePage({ params }: Props) {
     </article>
   );
 }
-
-export default ArticlePage;
