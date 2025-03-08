@@ -17,10 +17,7 @@ interface ArticleMeta {
   tags: string[];
 }
 
-interface ArticleContent {
-  meta: ArticleMeta;
-  content: string;
-}
+
 
 // Fungsi untuk memformat tanggal
 function formatDate(date: string) {
