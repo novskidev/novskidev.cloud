@@ -49,16 +49,13 @@ export async function generateStaticParams() {
 }
 
 type ArticlePageProps = {
-  params: Promise<{ slug: string }> | { slug: string }
+  params: { slug: string }
 }
 
 export default async function ArticlePage({ 
   params 
 }: ArticlePageProps) {
-  // If params is a Promise, await it
-  const resolvedParams = await Promise.resolve(params);
-  
-  const slug = resolvedParams.slug;
+  const slug = params.slug;
   const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { content, data } = matter(fileContent);
