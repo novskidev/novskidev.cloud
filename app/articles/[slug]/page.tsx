@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 // Define type for component props
 type ComponentProps = {
@@ -54,16 +55,11 @@ export async function generateStaticParams() {
   }
 }
 
-// Update the type to match Next.js expectations
-type Params = {
-  slug: string;
-}
-
-// Use Next.js's expected function signature
+// Use the standard Next.js page component signature
 export default async function ArticlePage({
   params,
 }: {
-  params: Params;
+  params: { slug: string }
 }) {
   const { slug } = params;
   const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
@@ -93,4 +89,17 @@ export default async function ArticlePage({
       </div>
     </article>
   );
+}
+
+// Add this function to generate metadata for the page
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = params;
+  const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const { data } = matter(fileContent);
+  
+  return {
+    title: data.title,
+    description: data.description || 'Article page',
+  };
 }
