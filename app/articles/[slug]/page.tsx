@@ -54,12 +54,17 @@ export async function generateStaticParams() {
   }
 }
 
-// Page component props type
-type ArticlePageProps = {
-  params: { slug: string }
+// Update the type to match Next.js expectations
+type Params = {
+  slug: string;
 }
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
+// Use Next.js's expected function signature
+export default async function ArticlePage({
+  params,
+}: {
+  params: Params;
+}) {
   const { slug } = params;
   const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
   
