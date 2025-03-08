@@ -11,7 +11,7 @@ type ComponentProps = {
   className?: string;
   href?: string;
   [key: string]: unknown;
-}
+};
 
 // Format date for display
 function formatDate(date: string) {
@@ -39,11 +39,11 @@ const mdxComponents = {
 
 // Generate static paths for all MDX files
 export async function generateStaticParams() {
-  const articlesDir = path.join(process.cwd(), 'app/articles/[slug]');
-  
+  const articlesDir = path.join(process.cwd(), 'app/articles');
+
   try {
     const files = fs.readdirSync(articlesDir);
-    
+
     return files
       .filter(file => file.endsWith('.mdx'))
       .map(file => ({
@@ -56,14 +56,14 @@ export async function generateStaticParams() {
 }
 
 // Use the standard Next.js page component signature
-export default async function ArticlePage({
-  params,
-}: {
-  params: { slug: string }
+export default async function ArticlePage({ 
+  params 
+}: { 
+  params: { slug: string } 
 }) {
   const { slug } = params;
-  const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
-  
+  const filePath = path.join(process.cwd(), 'app/articles', `${slug}.mdx`);
+
   // Read and parse the MDX file
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { content, data } = matter(fileContent);
@@ -92,9 +92,13 @@ export default async function ArticlePage({
 }
 
 // Add this function to generate metadata for the page
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { slug: string } 
+}): Promise<Metadata> {
   const { slug } = params;
-  const filePath = path.join(process.cwd(), 'app/articles/[slug]', `${slug}.mdx`);
+  const filePath = path.join(process.cwd(), 'app/articles', `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { data } = matter(fileContent);
   
