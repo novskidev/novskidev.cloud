@@ -6,18 +6,6 @@ import Link from 'next/link';
 
 
 
-// Add these interfaces at the top of your file
-interface ArticleMeta {
-  title: string;
-  date: string;
-  description: string;
-  slug: string;
-  author: string;
-  category: string;
-  tags: string[];
-}
-
-
 
 // Fungsi untuk memformat tanggal
 function formatDate(date: string) {
