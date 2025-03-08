@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 
 
-
 // Fungsi untuk memformat tanggal
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString('en-US', {
@@ -16,19 +15,27 @@ function formatDate(date: string) {
   });
 }
 
+// Define type for component props
+type ComponentProps = {
+  children: React.ReactNode;
+  className?: string;
+  href?: string;
+  [key: string]: unknown;
+}
+
 // Custom components for MDX with dark mode support
 const components = {
-  h1: (props: any) => <h1 className="text-3xl font-bold text-verdigris dark:text-[#56D3A8] my-4" {...props} />,
-  h2: (props: any) => <h2 className="text-xl font-bold text-verdigris dark:text-[#56D3A8] my-3" {...props} />,
-  h3: (props: any) => <h3 className="text-lg font-bold text-verdigris dark:text-[#56D3A8] my-2" {...props} />,
-  p: (props: any) => <p className="my-2 text-gray-800 dark:text-gray-200" {...props} />,
-  a: (props: any) => <a className="text-verdigris dark:text-[#56D3A8] hover:underline" {...props} />,
-  ul: (props: any) => <ul className="list-disc pl-5 my-2 text-gray-800 dark:text-gray-200" {...props} />,
-  ol: (props: any) => <ol className="list-decimal pl-5 my-2 text-gray-800 dark:text-gray-200" {...props} />,
-  li: (props: any) => <li className="my-1 text-gray-800 dark:text-gray-200" {...props} />,
-  blockquote: (props: any) => <blockquote className="border-l-4 border-verdigris dark:border-[#56D3A8] pl-4 italic my-2 text-gray-700 dark:text-gray-300" {...props} />,
-  code: (props: any) => <code className="bg-gray-100 dark:bg-gray-800 rounded px-1 py-0.5 text-gray-800 dark:text-gray-200" {...props} />,
-  pre: (props: any) => <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto my-4 text-gray-800 dark:text-gray-200" {...props} />,
+  h1: (props: ComponentProps) => <h1 className="text-3xl font-bold text-verdigris dark:text-[#56D3A8] my-4" {...props} />,
+  h2: (props: ComponentProps) => <h2 className="text-xl font-bold text-verdigris dark:text-[#56D3A8] my-3" {...props} />,
+  h3: (props: ComponentProps) => <h3 className="text-lg font-bold text-verdigris dark:text-[#56D3A8] my-2" {...props} />,
+  p: (props: ComponentProps) => <p className="my-2 text-gray-800 dark:text-gray-200" {...props} />,
+  a: (props: ComponentProps) => <a className="text-verdigris dark:text-[#56D3A8] hover:underline" {...props} />,
+  ul: (props: ComponentProps) => <ul className="list-disc pl-5 my-2 text-gray-800 dark:text-gray-200" {...props} />,
+  ol: (props: ComponentProps) => <ol className="list-decimal pl-5 my-2 text-gray-800 dark:text-gray-200" {...props} />,
+  li: (props: ComponentProps) => <li className="my-1 text-gray-800 dark:text-gray-200" {...props} />,
+  blockquote: (props: ComponentProps) => <blockquote className="border-l-4 border-verdigris dark:border-[#56D3A8] pl-4 italic my-2 text-gray-700 dark:text-gray-300" {...props} />,
+  code: (props: ComponentProps) => <code className="bg-gray-100 dark:bg-gray-800 rounded px-1 py-0.5 text-gray-800 dark:text-gray-200" {...props} />,
+  pre: (props: ComponentProps) => <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto my-4 text-gray-800 dark:text-gray-200" {...props} />,
 };
 
 export async function generateStaticParams() {
