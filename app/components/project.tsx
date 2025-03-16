@@ -14,7 +14,7 @@ function Projects() {
       </div>
 
       <div className="flex gap-4 flex-wrap items-center justify-center mb-[80px] w-10/12 ">
-        {Project.map((project) => (
+        {Project.slice(0, 6).map((project) => (
           <Card
             key={project.key}
             title={project.title}
