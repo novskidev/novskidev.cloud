@@ -20,6 +20,8 @@ export default {
         verdigris: "#34A0A4",
         bondi_blue: "#168AAD",
         cerulean: "#1A759F",
+       primary: '#0070f3',
+      'primary-dark': '#0051a2' 
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
