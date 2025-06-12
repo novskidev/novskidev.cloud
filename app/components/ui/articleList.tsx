@@ -1,10 +1,16 @@
-import { articleType } from "@/app/utils/utility";
+'use client';
+
 import Link from "next/link";
 import Divider from "./divider";
 
+type ArticleListProps = {
+    title: string;
+    date: string;
+    description: string;
+    link: string;
+};
 
-
-function ArticleList({title, date, description, link} : articleType[number]) {
+function ArticleList({title, date, description, link}: ArticleListProps) {
     return ( 
         <article className="flex flex-col gap-1 ">
          <h1 className="font-roboto font-semibold text-xs sm:text-sm md:text-base dark:text-[#E4E4E4]">{title}</h1> 

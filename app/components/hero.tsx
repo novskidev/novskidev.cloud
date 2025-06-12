@@ -1,4 +1,6 @@
-import profilpic from "../../public/images/Diva_18022025.png"
+'use client';
+
+import profilpic from "../../public/images/novski.png"
 import Image from "next/image";
 
 function Hero() {

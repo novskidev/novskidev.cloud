@@ -5,10 +5,10 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "Novskidev.cloud - Personal Portofolio Website",
+  title: "Novskidev.cloud | Novian's Portfolio",
   description: "Portofolio Website to Share my Ideas",
   icons: {
-    icon: '/app/favicon.ico',
+    icon: '/app/favicon1.ico',
   },
 };
 
