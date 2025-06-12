@@ -4,20 +4,14 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { menu } from '../utils/utility';
+import { useTheme } from '../utils/theme-provider';
 import Link from 'next/link';
 
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    if (typeof window !== 'undefined') {
-      document.documentElement.classList.toggle('dark');
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className={`fixed top-0 w-full h-[64px] bg-white dark:bg-black shadow-md z-50 p-4 font-roboto`}>
@@ -43,8 +37,8 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4 ">
-          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:scale-125 transition-all duration-300">
-            {isDarkMode ? (
+          <button onClick={toggleTheme} className="p-2 rounded-full hover:scale-125 transition-all duration-300">
+            {theme === 'dark' ? (
               <Sun size={20} className="text-yellow-400" />
             ) : (
               <Moon size={20} className="text-gray-600 dark:text-gray-300" />

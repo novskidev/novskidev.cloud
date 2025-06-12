@@ -7,7 +7,7 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./content/**/*.mdx"
   ],
-  darkMode: "class",
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
