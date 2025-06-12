@@ -4,27 +4,25 @@ import { formatDate } from '@/app/components/articles'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-static'
 
-interface PageProps {
-    params: {
-        slug: string;
-    };
+type Props = {
+    params: { slug: string }
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const article = getArticleBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const article = getArticleBySlug(params.slug)
     return {
         title: `${article.title} | Novskidev.cloud`,
         description: article.description,
-    };
+    }
 }
 
 export async function generateStaticParams() {
-    const articles = getAllArticles();
+    const articles = getAllArticles()
     return articles.map((article) => ({
         slug: article.slug,
-    }));
+    }))
 }
 
 export default async function ArticlePage({ params }: { params: { slug: string } }) {
