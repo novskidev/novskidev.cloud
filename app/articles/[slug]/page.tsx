@@ -2,23 +2,33 @@ import { getArticleBySlug, getAllArticles } from '@/app/utils/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { formatDate } from '@/app/components/articles'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 export const dynamic = 'force-static';
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
+interface PageProps {
+    params: {
+        slug: string;
+    };
+    searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const article = getArticleBySlug(params.slug);
+    return {
+        title: `${article.title} | Novskidev.cloud`,
+        description: article.description,
+    };
+}
+
+export async function generateStaticParams() {
     const articles = getAllArticles();
     return articles.map((article) => ({
         slug: article.slug,
     }));
 }
 
-type Props = {
-    params: {
-        slug: string
-    }
-}
-
-export default async function ArticlePage({ params }: Props) {
+export default async function ArticlePage({ params, searchParams }: PageProps) {
     const article = getArticleBySlug(params.slug)
 
     return (
