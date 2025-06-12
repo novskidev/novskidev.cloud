@@ -5,14 +5,20 @@ import Link from 'next/link'
 
 export const dynamic = 'force-static';
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
     const articles = getAllArticles();
     return articles.map((article) => ({
         slug: article.slug,
     }));
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
+type Props = {
+    params: {
+        slug: string
+    }
+}
+
+export default async function ArticlePage({ params }: Props) {
     const article = getArticleBySlug(params.slug)
 
     return (
