@@ -10,7 +10,6 @@ interface PageProps {
     params: {
         slug: string;
     };
-    searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -28,7 +27,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function ArticlePage({ params, searchParams }: PageProps) {
+export default async function ArticlePage({ params }: { params: { slug: string } }) {
     const article = getArticleBySlug(params.slug)
 
     return (
