@@ -36,20 +36,18 @@ export default {
               fontFamily: 'Roboto, sans-serif',
               color: '#1a1a1a',
             },
-            '--tw-prose-headings': '#34A0A4',
-            '.dark &': {
-              '--tw-prose-body': '#E4E4E4',
-              '--tw-prose-headings': '#56D3A8',
-              color: '#E4E4E4',
-              'h1, h2, h3, h4': {
-                color: '#56D3A8',
-              },
-              p: {
-                color: '#E4E4E4',
-              },
-            },
           },
         },
+        invert: {
+          css: {
+            'h1, h2, h3, h4': {
+              color: '#56D3A8',
+            },
+            p: {
+              color: '#E4E4E4',
+            },
+          }
+        }
       },
       fontFamily: {
         roboto: ["var(--font-roboto)"],
