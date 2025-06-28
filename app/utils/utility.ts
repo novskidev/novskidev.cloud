@@ -62,7 +62,7 @@ export const Project: projectType = [
         title: "MaxPredict",
         description: "a web application for make a A/B Testing for your Threads post powered by 1000 user simulation test with Open AI",
         imageSrc: "/images/MaxPredict.png",
-        link: "https://predict.maxpredict.id",
+        link: "https://predict.maxgpt.id",
     },
     {
         key: 4,
