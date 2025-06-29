@@ -3,7 +3,7 @@ import Card from "../components/ui/card";
 
 export default function ProjectsPage() {
     return (
-        <div className="flex flex-row gap-4 flex-wrap items-center justify-center mt-7 mb-[80px] w-10/12 ">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center mt-7 mb-[80px] w-full sm:w-10/12 px-2">
         {Project.map((project) => (
           <Card
             key={project.key}

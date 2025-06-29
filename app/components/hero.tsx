@@ -2,34 +2,95 @@
 
 import profilpic from "../../public/images/novski.png"
 import Image from "next/image";
+import { Atom, BadgeCent, Server, Database, BrainCircuit, Spline, Infinity, Code2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Hero() {
     return (
-        <section className="bg-[#F7F7F7] dark:bg-[#1A1A1A] w-full min-h-screen flex flex-col justify-center items-center p-5">
-            <Image src={profilpic} alt="Profile Picture" className="bg-gradient-to-r from-[#99D98C] to-[#34A0A4] mt-16 w-40 h-40 lg:w-60 lg:h-60 rounded-full object-cover" />
-            <div className="flex flex-col items-center text-center gap-4 max-w-3xl">
-                <h1 className="font-extrabold text-4xl md:text-6xl font-pally p-2 dark:text-white text-center leading-tight">
+        <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="bg-[#F7F7F7] dark:bg-[#1A1A1A] w-full min-h-screen flex flex-col justify-center items-center p-5"
+        >
+            <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.7, type: "spring" }}
+                className="flex justify-center items-center w-full"
+            >
+                <Image src={profilpic} alt="Profile Picture" className="bg-gradient-to-r from-[#99D98C] to-[#34A0A4] mt-8 w-32 h-32 sm:w-40 sm:h-40 lg:w-60 lg:h-60 rounded-full object-cover" />
+            </motion.div>
+            <div className="flex flex-col items-center text-center gap-2 sm:gap-4 max-w-xs sm:max-w-2xl md:max-w-3xl w-full px-2 sm:px-0">
+                <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.7 }}
+                    className="font-extrabold text-2xl sm:text-4xl md:text-6xl font-pally p-2 dark:text-white text-center leading-tight"
+                >
                     Hi, I&apos;m <span className="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-[#99D98C] to-[#34A0A4]">Novian</span>👋
-                </h1>
-                <p className="font-roboto font-semibold text-md text-wrap lg:text-xl md:text-lg p-2 dark:text-gray-300">
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.7 }}
+                    className="font-roboto font-semibold text-sm sm:text-md md:text-xl p-2 dark:text-gray-300"
+                >
                     A Passionate Software Engineer, <br className="hidden sm:block"/> Educator and Coffee Sipper ☕
-                </p>
-                <p className="font-roboto p-2 text-md md:text-lg sm:text-sm dark:text-gray-400">
+                </motion.p>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7, duration: 0.7 }}
+                    className="font-roboto p-2 text-xs sm:text-md md:text-lg dark:text-gray-400"
+                >
                     Helping businesses and individuals solve problems with clean code, <br className="hidden sm:block"/> 
                     innovative solutions, and engaging education.
-                </p>
-                <div className="flex flex-wrap font-roboto justify-center items-center gap-3 text-lg md:text-base sm:text-sm font-medium text-[#272727] dark:text-gray-300">
-                    <h3>+3 Years Experience</h3>
-                    <span className="hidden sm:inline">|</span>
-                    <h3>5+ Projects</h3>
-                    <span className="hidden sm:inline">|</span>
-                    <h3>+3 Apps Created</h3>
-                </div>
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 0.7 }}
+                    className="w-full flex justify-center mt-4 sm:mt-8"
+                >
+                    <div className="relative overflow-hidden w-full max-w-xs sm:max-w-xl md:max-w-2xl h-16 sm:h-20">
+                        <motion.div
+                            className="flex animate-slide gap-8 sm:gap-12 md:gap-16 items-center h-full"
+                            whileHover={{ scale: 1.05 }}
+                        >
+                            {/* React */}
+                            <Atom strokeWidth={2.5} className="text-cyan-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Next.js */}
+                            <Infinity strokeWidth={2.5} className="text-black dark:text-white w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Astro */}
+                            <BadgeCent strokeWidth={2.5} className="text-orange-400 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Svelte */}
+                            <Spline strokeWidth={2.5} className="text-orange-600 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Vue */}
+                            <BrainCircuit strokeWidth={2.5} className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Supabase */}
+                            <Database strokeWidth={2.5} className="text-emerald-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Express */}
+                            <Server strokeWidth={2.5} className="text-gray-700 dark:text-gray-300 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Python */}
+                            <Code2 strokeWidth={2.5} className="text-yellow-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            {/* Repeat for infinite effect */}
+                            <Atom strokeWidth={2.5} className="text-cyan-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <Infinity strokeWidth={2.5} className="text-black dark:text-white w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <BadgeCent strokeWidth={2.5} className="text-orange-400 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <Spline strokeWidth={2.5} className="text-orange-600 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <BrainCircuit strokeWidth={2.5} className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <Database strokeWidth={2.5} className="text-emerald-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <Server strokeWidth={2.5} className="text-gray-700 dark:text-gray-300 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <Code2 strokeWidth={2.5} className="text-yellow-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                        </motion.div>
+                    </div>
+                </motion.div>
             </div>
 
             <div className="fixed left-[-100px] top-1/4 w-[250px] h-[250px] blur-[200px] rounded-full bg-light_green dark:bg-[#99D98C]/50"></div>
             <div className="fixed right-[-100px] bottom-1/4 w-[350px] h-[350px] blur-[300px] rounded-full bg-verdigris dark:bg-[#34A0A4]/50"></div>
-        </section>
+        </motion.section>
     );
 }
 

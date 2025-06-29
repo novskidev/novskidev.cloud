@@ -1,4 +1,3 @@
-
 type menuNav = {
     id: number,
     title: string,
@@ -38,6 +37,11 @@ export const menu: menuNav[] = [
         id: 3,
         title: "About",
         path: "/about",
+    },
+    {
+        id: 4,
+        title: "Product",
+        path: "/product",
     },
 ];
 
