@@ -1,4 +1,5 @@
 import Card from "../components/ui/card";
+import { MotionDiv } from "../components/motion-wrapper";
 
 const products = [
 	{
@@ -24,18 +25,37 @@ const products = [
 	},
 ];
 
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+};
+
+const itemVariants = {
+	hidden: { y: 20, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+	},
+};
+
 export default function ProductPage() {
 	return (
-		<div className="flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center mt-7 mb-[80px] w-full sm:w-10/12 px-2">
+		<MotionDiv
+			className="flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center mt-7 mb-[80px] w-full sm:w-10/12 px-2"
+			variants={containerVariants}
+			initial="hidden"
+			animate="visible"
+		>
 			{products.map((product) => (
-				<Card
-					key={product.key}
-					title={product.title}
-					description={product.description}
-					imageSrc={product.imageSrc}
-					link={product.link}
-				/>
+				<MotionDiv key={product.key} variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+					<Card key={product.key} title={product.title} description={product.description} imageSrc={product.imageSrc} link={product.link} />
+				</MotionDiv>
 			))}
-		</div>
+		</MotionDiv>
 	);
 }
