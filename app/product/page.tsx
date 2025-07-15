@@ -4,25 +4,32 @@ import { MotionDiv } from "../components/motion-wrapper";
 const products = [
 	{
 		key: 1,
-		title: "E-Book: Panduan Next.js untuk Pemula",
-		description: "Pelajari Next.js dari dasar hingga mahir dengan e-book lengkap ini.",
+		title: "Advanced Prompt Pembelajaran AI menggunakan ChatGPT",
+		description: "Koleksi prompt siap pakai yang dirancang khusus untuk mendampingi guru dalam memanfaatkan AI di kelas!",
 		imageSrc: "/images/maxgpt.png",
-		link: "#",
+		link: "https://lynk.id/noviann/gwvgww5lnwd1",
 	},
 	{
 		key: 2,
-		title: "Template Portfolio Developer",
-		description: "Template website portfolio modern dan responsif untuk developer.",
+		title: "[GPTs] GuruSoalAI - AI Buat Bikin Soal Otomatis by Novian",
+		description: "GuruSoalAI adalah GPT custom siap pakai yang dirancang khusus buat bantu kamu bikin soal dari materi pelajaran. ",
 		imageSrc: "/images/portofolio.png",
-		link: "#",
+		link: "https://lynk.id/noviann/xdxj6zv0weqk",
 	},
 	{
 		key: 3,
-		title: "Plugin ChatGPT untuk VSCode",
-		description: "Tingkatkan produktivitas coding Anda dengan plugin ChatGPT.",
+		title: "Mengenal Pembelajaran Menggunakan AI",
+		description: "Panduan komprehensif dan inspiratif yang membahas bagaimana AI dapat dimanfaatkan ",
 		imageSrc: "/images/maxfoto.png",
-		link: "#",
+		link: "https://lynk.id/noviann/yxqj6n84yn3r",
 	},
+	{
+		key: 4,
+		title: "AI for Education: Komunitas AI untuk Pendidik di Indonesia 🇮🇩",
+		description: "Komunitas AI untuk Pendidik di Indonesia 🇮🇩 adalah tempat berkumpulnya para pendidik yang ingin belajar dan berbagi tentang pemanfaatan AI dalam pendidikan.",
+		imageSrc: "/images/maxgpt.png",
+		link: "https://lynk.id/noviann/o68q4oqq4pre",
+	}
 ];
 
 const containerVariants = {
