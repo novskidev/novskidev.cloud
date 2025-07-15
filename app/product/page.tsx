@@ -6,28 +6,28 @@ const products = [
 		key: 1,
 		title: "Advanced Prompt Pembelajaran AI menggunakan ChatGPT",
 		description: "Koleksi prompt siap pakai yang dirancang khusus untuk mendampingi guru dalam memanfaatkan AI di kelas!",
-		imageSrc: "/images/maxgpt.png",
+		imageSrc: "/images/test.jpg",
 		link: "https://lynk.id/noviann/gwvgww5lnwd1",
 	},
 	{
 		key: 2,
 		title: "[GPTs] GuruSoalAI - AI Buat Bikin Soal Otomatis by Novian",
 		description: "GuruSoalAI adalah GPT custom siap pakai yang dirancang khusus buat bantu kamu bikin soal dari materi pelajaran. ",
-		imageSrc: "/images/portofolio.png",
+		imageSrc: "/images/guru_soal.png",
 		link: "https://lynk.id/noviann/xdxj6zv0weqk",
 	},
 	{
 		key: 3,
 		title: "Mengenal Pembelajaran Menggunakan AI",
 		description: "Panduan komprehensif dan inspiratif yang membahas bagaimana AI dapat dimanfaatkan ",
-		imageSrc: "/images/maxfoto.png",
+		imageSrc: "/images/pembelajaran_ai.jpeg",
 		link: "https://lynk.id/noviann/yxqj6n84yn3r",
 	},
 	{
 		key: 4,
 		title: "AI for Education: Komunitas AI untuk Pendidik di Indonesia 🇮🇩",
-		description: "Komunitas AI untuk Pendidik di Indonesia 🇮🇩 adalah tempat berkumpulnya para pendidik yang ingin belajar dan berbagi tentang pemanfaatan AI dalam pendidikan.",
-		imageSrc: "/images/maxgpt.png",
+		description: "Komunitas AI para pendidik yang ingin belajar dan berbagi tentang pemanfaatan AI.",
+		imageSrc: "/images/aie.png",
 		link: "https://lynk.id/noviann/o68q4oqq4pre",
 	}
 ];
