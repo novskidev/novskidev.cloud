@@ -2,7 +2,9 @@
 
 import profilpic from "../../public/images/novski.png"
 import Image from "next/image";
-import { Atom, BadgeCent, Server, Database, BrainCircuit, Spline, Infinity, Code2 } from "lucide-react";
+import { FaReact, FaPython } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiAstro, SiSvelte, SiVuedotjs, SiSupabase, SiExpress } from "react-icons/si";
 import { motion } from "framer-motion";
 
 function Hero() {
@@ -59,30 +61,30 @@ function Hero() {
                             whileHover={{ scale: 1.05 }}
                         >
                             {/* React */}
-                            <Atom strokeWidth={2.5} className="text-cyan-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <FaReact className="text-cyan-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Next.js */}
-                            <Infinity strokeWidth={2.5} className="text-black dark:text-white w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <RiNextjsFill className="text-black dark:text-white w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Astro */}
-                            <BadgeCent strokeWidth={2.5} className="text-orange-400 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiAstro className="text-orange-400 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Svelte */}
-                            <Spline strokeWidth={2.5} className="text-orange-600 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiSvelte className="text-orange-600 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Vue */}
-                            <BrainCircuit strokeWidth={2.5} className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiVuedotjs className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Supabase */}
-                            <Database strokeWidth={2.5} className="text-emerald-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiSupabase className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Express */}
-                            <Server strokeWidth={2.5} className="text-gray-700 dark:text-gray-300 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiExpress className="text-gray-700 dark:text-gray-300 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Python */}
-                            <Code2 strokeWidth={2.5} className="text-yellow-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <FaPython className="text-yellow-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                             {/* Repeat for infinite effect */}
-                            <Atom strokeWidth={2.5} className="text-cyan-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <Infinity strokeWidth={2.5} className="text-black dark:text-white w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <BadgeCent strokeWidth={2.5} className="text-orange-400 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <Spline strokeWidth={2.5} className="text-orange-600 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <BrainCircuit strokeWidth={2.5} className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <Database strokeWidth={2.5} className="text-emerald-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <Server strokeWidth={2.5} className="text-gray-700 dark:text-gray-300 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
-                            <Code2 strokeWidth={2.5} className="text-yellow-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <FaReact className="text-cyan-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <RiNextjsFill className="text-black dark:text-white w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiAstro className="text-orange-400 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiSvelte className="text-orange-600 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiVuedotjs className="text-green-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiSupabase className="text-emerald-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <SiExpress className="text-gray-700 dark:text-gray-300 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
+                            <FaPython className="text-yellow-500 w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20" />
                         </motion.div>
                     </div>
                 </motion.div>
