@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import ArticleList from './ui/articleList';
 import { formatDate } from './articles';
-import type { Article } from '../utils/mdx';
+import type { ArticleMetadata as Article } from '../utils/mdx';
 
 const containerVariants = {
   hidden: { opacity: 0 },
