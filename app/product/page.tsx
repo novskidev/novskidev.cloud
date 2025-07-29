@@ -2,6 +2,14 @@ import Card from "../components/ui/card";
 import { MotionDiv } from "../components/motion-wrapper";
 
 const products = [
+	{ 
+		key: 0,
+		title: "Panduan Pembelajaran Koding dan AI",
+		description: "Buku ini adalah kunci membuka dunia koding dan AI dengan cara yang sederhana, menyenangkan, dan aplikatif — dirancang khusus untuk pendidikan dasar.",
+		imageSrc: "/images/pembelajaran_koding.png",
+		link: "https://s.id/OikdA",
+	},
+
 	{
 		key: 1,
 		title: "Advanced Prompt Pembelajaran AI menggunakan ChatGPT",
