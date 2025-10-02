@@ -20,11 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClientWrapper 
-        className={`${roboto.variable} ${myPally.variable} ${myPallyBold.variable} bg-[#F7F7F7] dark:bg-[#1A1A1A] antialiased`}
+      <ClientWrapper
+        className={`${roboto.variable} ${myPally.variable} ${myPallyBold.variable} bg-[#F7F7F7] dark:bg-[#1A1A1A] antialiased min-h-screen`}
       >
         <Navbar />
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
         <Footer />
       </ClientWrapper>
     </html>

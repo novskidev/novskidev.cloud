@@ -26,7 +26,7 @@ export default function ArticlesPage() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="mt-5 w-8/12"
+            className="mt-5 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
         >
             {articles.map((article) => (
                 <MotionDiv

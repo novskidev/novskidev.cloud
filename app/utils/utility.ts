@@ -47,29 +47,36 @@ export const menu: menuNav[] = [
 
 
 export const Project: projectType = [
-    {
+   {
         key: 1,
+        title: "Lindung Rent",
+        description: "Motorcycle Rent WebApps",
+        imageSrc: "/images/lindung_motor.png",
+        link: "https://lindung.id",
+    }, 
+    {
+        key: 2,
         title: "MaxFoto",
         description: "Ai Photo Editor with Gemini AI",
         imageSrc: "/images/maxfoto.png",
         link: "https://foto.maxgpt.id",
     },
     {
-        key: 2,
+        key: 3,
         title: "Mending Mana Web Apps",
         description: "A web application for make a better decision in choosing product for your with Gemini AI and Svelte",
         imageSrc: "/images/mendingmana.png",
         link: "https://github.com/novskidev/mendingmana.id",
     },
     {
-        key: 3,
+        key: 4,
         title: "MaxPredict",
         description: "a web application for make a A/B Testing for your Threads post powered by 1000 user simulation test with Open AI",
         imageSrc: "/images/MaxPredict.png",
         link: "https://predict.maxgpt.id",
     },
     {
-        key: 4,
+        key: 5,
         title: "TemanGuru",
         description: "A web application to help a teacher make a better quiz with the power of Gemini AI",
         imageSrc: "/images/temanguru.png",
@@ -77,49 +84,49 @@ export const Project: projectType = [
     },
 
     {
-        key: 5,
+        key: 6,
         title: "Novskidev",
         description: "Novian Developer Portfolio",
         imageSrc: "/images/portofolio.png",
         link: "https://github.com/novskidev/novskidev",
     },
     {
-        key: 6,
+        key: 7,
         title: "VanLife App",
         description: "Renting Travel Vans Application created with React.Js, TailwindCSS, and React Route V6",
         imageSrc: "/images/vanapp.png",
         link: "https://github.com/novskidev/VanlifeApp",
     },
     {
-        key: 7,
+        key: 8,
         title: "Weather App",
         description: "A weather forecast web app built with Next.js and TailwindCSS.",
         imageSrc: "/images/weatherapp.png",
         link: "https://github.com/novskidev/simple-weather-app",
     },
     {
-        key: 8,
+        key: 9,
         title: "Quizzical App",
         description: "Education Media for Student created using React.js and Tailwind.css",
         imageSrc: "/images/quizzicalapp.png",
         link: "https://github.com/novskidev/Quizzical-App",
     },
     {
-        key: 9,
+        key: 10,
         title: "Nike Landing Page",
         description: "A landing page for Nike website.",
         imageSrc: "/images/nikelanding.png",
         link: "https://github.com/novskidev/nike-landingpage",
     },
     {
-        key: 10,
+        key: 11,
         title: "MaxGPT Landing Page",
         description: "A landing page for MaxGPT website created with Astro.js and TailwindCSS.",
         imageSrc: "/images/maxgpt.png",
         link: "https://github.com/novskidev/maxgpt.id",
     },
     {
-        key: 11,
+        key: 12,
         title: "Tenzies game",
         description: "A game powered by react.js.",
         imageSrc: "/images/tenziez.png",
