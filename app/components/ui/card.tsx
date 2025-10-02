@@ -1,10 +1,17 @@
 "use client";
 
-import { projectType } from "@/app/utils/utility";
 import Link from "next/link";
 import Image from "next/image";
 
-function Card({ title, description, imageSrc, link, key }: projectType[number] & { key?: number }) {
+interface CardProps {
+  title: string;
+  description: string;
+  imageSrc: string;
+  link: string;
+  key?: number;
+}
+
+function Card({ title, description, imageSrc, link }: CardProps) {
   return (
     <Link href={link} className="block group">
       <article className="w-full max-w-[320px] bg-white dark:bg-[#1A1A1A] rounded-3xl flex flex-col justify-between p-5 shadow-md overflow-hidden transition-all duration-300 min-h-[280px] cursor-pointer group-hover:shadow-lg hover:scale-[1.02]">

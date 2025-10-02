@@ -27,15 +27,16 @@ export default function Utterances({
   }, []);
 
   useEffect(() => {
-    if (!containerRef.current || !mountedRef.current) return;
+    const container = containerRef.current;
+    if (!container || !mountedRef.current) return;
 
     // Clear any existing utterances content
-    containerRef.current.innerHTML = '';
+    container.innerHTML = '';
     setIsLoaded(false);
 
     // Add a small delay to ensure DOM is stable
     const timeoutId = setTimeout(() => {
-      if (!containerRef.current || !mountedRef.current) return;
+      if (!container || !mountedRef.current) return;
 
       const script = document.createElement('script');
       script.src = 'https://utteranc.es/client.js';
@@ -58,8 +59,8 @@ export default function Utterances({
       };
 
       // Double check container exists and component is still mounted
-      if (containerRef.current && mountedRef.current) {
-        containerRef.current.appendChild(script);
+      if (container && mountedRef.current) {
+        container.appendChild(script);
       }
     }, 100);
 
@@ -68,8 +69,8 @@ export default function Utterances({
       // Mark as unmounted immediately
       mountedRef.current = false;
       // Clear container if it still exists
-      if (containerRef.current) {
-        containerRef.current.innerHTML = '';
+      if (container) {
+        container.innerHTML = '';
       }
       setIsLoaded(false);
     };
