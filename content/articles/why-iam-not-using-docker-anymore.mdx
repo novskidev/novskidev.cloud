@@ -1,0 +1,175 @@
+---
+title: "Why I’m Not Using Docker Anymore"
+date: "2025-10-05"
+description: "My journey moving away from Docker to Podman — the reasons, the pain points, and how life got easier without Docker Desktop."
+---
+
+# Why I’m Not Using Docker Anymore
+
+For years, Docker was my go-to tool for containerization.  
+It changed the way I built, tested, and deployed applications.
+
+But over time, **the simplicity that made Docker great became its own limitation**.  
+After countless updates, licensing changes, and background issues, I finally decided to move on — to **Podman**.
+
+Here’s why.
+
+---
+
+## 🧩 The Problem with Docker
+
+At first, Docker was revolutionary.  
+But as my projects grew, so did the problems.
+
+### 1. Docker Desktop and Licensing Fatigue
+Docker Desktop used to be free and lightweight.  
+Now, it’s a heavy GUI with **license restrictions** for teams and enterprises.  
+
+If you’re on macOS or Windows, you’re forced to run a VM layer just to make Docker work.  
+And that means:
+- Slower performance  
+- More RAM consumption  
+- Background processes you didn’t ask for  
+
+It became **bloated** — the opposite of what containers are supposed to be.
+
+---
+
+### 2. The Daemon Dependency
+
+Docker needs a **central daemon (dockerd)** to run containers.  
+If that daemon crashes, every running container goes down with it.
+
+This is especially frustrating on servers or CI/CD environments.  
+It’s like having a single point of failure baked right into your development stack.
+
+---
+
+### 3. Root Privileges and Security Risks
+
+By default, Docker runs as root — meaning:
+- Any container escape vulnerability is catastrophic  
+- It increases your attack surface  
+- You need extra hardening just to stay safe  
+
+For development, that’s annoying.  
+For production, it’s **a dealbreaker**.
+
+---
+
+### 4. The CLI “Magic” That’s Hard to Trust
+
+Docker tries to be friendly with simple commands like:
+```bash
+docker run -d -p 80:80 nginx
+```
+But behind the scenes, there’s a lot of hidden behavior — networks, bridges, permissions, volumes —  
+that you don’t always control directly.
+
+That “magic” often turns debugging into a guessing game.
+
+---
+
+## 🚀 Enter Podman
+
+Podman (short for *Pod Manager*) came as a breath of fresh air.  
+It’s **daemonless**, **rootless**, and **Docker-compatible**.
+
+Meaning — you can literally run:
+```bash
+podman run -d -p 80:80 nginx
+```
+and it works exactly like Docker… but cleaner.
+
+---
+
+### 🧱 No Daemon, No Problem
+
+Each container in Podman runs as an independent process under your user.  
+No background service, no central daemon.  
+
+If one container crashes, it doesn’t take down the others.  
+It feels **Unix-y**, in the best possible way.
+
+---
+
+### 🔒 Rootless by Design
+
+Podman runs containers as your normal user.  
+That means:
+- Safer by default  
+- No need for `sudo`  
+- No privileged socket hanging around  
+
+It’s perfect for dev machines and servers where you care about isolation.
+
+---
+
+### 🧠 Docker-Compatible, Without Docker
+
+Podman supports:
+- The same CLI syntax as Docker  
+- The same image formats  
+- The same registries (like Docker Hub or GHCR)
+
+You can even alias it:
+```bash
+alias docker=podman
+```
+and your existing scripts will keep working.
+
+---
+
+## 🖥️ Bonus: Simpler Integration for Servers
+
+Podman integrates beautifully with **systemd**.  
+You can auto-generate a service file from a container:
+```bash
+podman generate systemd --name myapp
+```
+
+No need for Compose, no need for daemon reloads.  
+Your container becomes a native Linux service — exactly as it should.
+
+---
+
+## 🌱 Why I’m Staying with Podman
+
+After migrating, here’s what I noticed:
+- My system uses less memory  
+- No hidden background processes  
+- Faster startup for containers  
+- Easier debugging and cleaner logs  
+- Better security without any hacks  
+
+And the best part?  
+It feels like I’m finally back in control.
+
+---
+
+## ⚙️ Final Thought
+
+Docker deserves credit for pioneering containerization.  
+But its **ecosystem drifted from developer simplicity** toward heavy commercial tooling.
+
+Podman brought me back to the fundamentals — **lightweight, secure, and transparent containers**.
+
+If you’re tired of Docker Desktop eating resources or fighting daemon issues,  
+give Podman a try. You might never go back.
+
+---
+
+**Goodbye Docker.**  
+You were great — but it’s time for something better.
+
+---
+
+## 📚 Source Reference
+
+This article was informed and supported by insights from the following resource:
+
+**Podman vs Docker: Key Differences and Which is Better**  
+*By Anjali Udasi — 16 min read*  
+> Explore key differences in architecture, security, and tooling to choose the right containerization tool for your needs.  
+> Covers in-depth topics including architecture, performance, orchestration, security, and migration from Docker to Podman.  
+> View original: *Podman vs Docker: Explore key differences in architecture, security, and tooling to choose the right containerization tool for your needs.*
