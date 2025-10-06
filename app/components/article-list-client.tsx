@@ -18,7 +18,7 @@ const containerVariants = {
 export function AnimatedArticleList({ articles }: { articles: Article[] }) {
   return (
     <motion.div
-      className="mt-5 w-8/12"
+      className="mt-6 w-full max-w-4xl space-y-4 mx-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

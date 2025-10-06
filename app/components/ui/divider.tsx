@@ -1,6 +1,6 @@
 const Divider = () => {
     return (
-      <div className="w-full border-t border-gray-300 my-4" />
+      <div className="my-4 w-full border-t border-gray-200 dark:border-gray-700" />
     );
   };
   

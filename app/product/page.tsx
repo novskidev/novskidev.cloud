@@ -61,7 +61,7 @@ const itemVariants = {
 export default function ProductPage() {
 	return (
 		<MotionDiv
-			className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-7 mb-[80px] w-full max-w-6xl mx-auto px-4"
+			className="grid w-full grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3"
 			variants={containerVariants}
 			initial="hidden"
 			animate="visible"

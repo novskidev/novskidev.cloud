@@ -3,26 +3,28 @@ import Card from "./ui/card";
 
 function Projects() {
   return (
-    <section className="w-full h-fit flex flex-col items-center justify-center bg-kappel dark:bg-[#121212] transition-all duration-300">
-      <div className="w-8/12 my-[40px] mx-[264px]">
-        <h1 className="font-pally text-left text-wrap font-bold text-6xl text-white dark:text-[#56D3A8] transition-all duration-300">
-          Projects
-        </h1>
-        <p className="font-roboto text-white dark:text-[#E4E4E4] text-xs sm:text-sm md:text-base text-wrap text-left py-2 transition-all duration-300">
-          Open-source projects I&apos;ve made over the years, including this website, games, and apps.
-        </p>
-      </div>
+    <section className="w-full bg-kappel py-16 sm:py-24 dark:bg-[#121212] transition-all duration-300">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 sm:px-6 lg:px-8">
+        <header className="space-y-3 text-center text-white sm:text-left dark:text-[#E4E4E4]">
+          <h1 className="font-pally text-3xl font-bold sm:text-4xl lg:text-5xl">
+            Projects
+          </h1>
+          <p className="font-roboto text-sm sm:text-base lg:text-lg">
+            Open-source projects I&apos;ve made over the years, including this website, games, and apps.
+          </p>
+        </header>
 
-      <div className="flex gap-4 flex-wrap items-center justify-center mb-[80px] w-10/12 ">
-        {Project.slice(0, 6).map((project) => (
-          <Card
-            key={project.key}
-            title={project.title}
-            description={project.description}
-            imageSrc={project.imageSrc}
-            link={project.link}
-          />
-        ))}
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {Project.slice(0, 6).map((project) => (
+            <Card
+              key={project.key}
+              title={project.title}
+              description={project.description}
+              imageSrc={project.imageSrc}
+              link={project.link}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

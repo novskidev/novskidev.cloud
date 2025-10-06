@@ -6,8 +6,8 @@ export default function ProductLayout({
   children: ReactNode;
 }) {
   return (
-    <div className="w-full bg-[#F7F7F7] dark:bg-[#1A1A1A] my-[80px]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="w-full bg-[#F7F7F7] dark:bg-[#1A1A1A]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center mb-8">
           <h1 className="font-pally font-bold text-3xl sm:text-4xl lg:text-5xl text-verdigris dark:text-[#56D3A8] mb-4">
             Product

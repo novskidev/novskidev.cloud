@@ -13,7 +13,7 @@ function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-[#F7F7F7] dark:bg-[#1A1A1A] w-full min-h-screen flex flex-col justify-center items-center p-5"
+            className="bg-[#F7F7F7] dark:bg-[#1A1A1A] w-full min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-10"
         >
             <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}

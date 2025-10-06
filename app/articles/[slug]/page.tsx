@@ -39,20 +39,21 @@ export default async function ArticlePage({ params }: Props) {
   const articleUrl = `${baseUrl}/articles/${slug}`;
 
   return (
-    <div className="w-8/12 mt-8">
-      <div className="mb-8">
+    <div className="mx-auto mt-8 w-full max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mb-10">
         <Link
           href="/articles"
-          className="inline-flex items-center text-verdigris hover:text-kappel dark:text-[#56D3A8] dark:hover:text-[#34A0A4] mb-6 transition-colors duration-200"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-verdigris transition-colors duration-200 hover:text-kappel dark:text-[#56D3A8] dark:hover:text-[#34A0A4]"
         >
-          <span>← Back to Articles</span>
+          <span aria-hidden>←</span>
+          <span>Back to Articles</span>
         </Link>
-        <div className="flex gap-4 text-gray-600 dark:text-gray-400 mb-8">
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-gray-600 dark:text-gray-400 sm:text-sm">
           <time dateTime={article.date}>{formatDate(article.date)}</time>
           <span>{article.readingTime}</span>
         </div>
       </div>
-      <article className="prose dark:prose-invert max-w-none">
+      <article className="prose max-w-none dark:prose-invert">
         <MDXRemote source={article.content} />
       </article>
       
@@ -62,12 +63,14 @@ export default async function ArticlePage({ params }: Props) {
         description={article.description}
       />
       
-      <Utterances 
-        repo="novskidev/novskidev.cloud"
-        issueMap="pathname"
-        theme="preferred-color-scheme"
-        label="blog-comments"
-      />
+      <div className="mt-10">
+        <Utterances 
+          repo="novskidev/novskidev.cloud"
+          issueMap="pathname"
+          theme="preferred-color-scheme"
+          label="blog-comments"
+        />
+      </div>
     </div>
   );
 }
