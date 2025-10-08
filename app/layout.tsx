@@ -19,14 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ClientWrapper 
-        className={`${roboto.variable} ${myPally.variable} ${myPallyBold.variable} bg-[#F7F7F7] dark:bg-[#1A1A1A] antialiased`}
-      >
-        <Navbar />
-        {children}
-        <Footer />
-      </ClientWrapper>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${roboto.variable} ${myPally.variable} ${myPallyBold.variable} bg-[#F7F7F7] dark:bg-[#1A1A1A] antialiased min-h-screen flex flex-col overflow-x-hidden`}>
+        <ClientWrapper>
+          <Navbar />
+          <main className="flex-1 pt-16 sm:pt-20">
+            {children}
+          </main>
+          <Footer />
+        </ClientWrapper>
+      </body>
     </html>
   );
 }
