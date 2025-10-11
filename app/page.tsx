@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import Hero from "./components/hero";
 import Projects from "./components/project";
 import Articles from "./components/articles";
