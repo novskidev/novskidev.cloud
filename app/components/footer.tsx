@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from 'lucide-react';
+import { Github, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 
@@ -17,6 +17,9 @@ function Footer() {
                        <Link href={'https://www.linkedin.com/in/noviann/'} aria-label="LinkedIn">
                            <Linkedin className='w-5 h-5 sm:w-6 sm:h-6 hover:scale-125 transition-all duration-300 dark:text-[#E4E4E4]'/>
                        </Link>
+                        <Link href={'https://www.threads.com/@novn_'} aria-label="Threads">
+                            <MessageCircle className='w-5 h-5 sm:w-6 sm:h-6 hover:scale-125 transition-all duration-300 dark:text-[#E4E4E4]'/>
+                        </Link>
                    </section>
                    <p className="text-sm sm:text-base font-roboto font-semibold dark:text-[#E4E4E4] text-center">
                        Created By Novian ©{new Date().getFullYear()}
