@@ -24,6 +24,11 @@ export type articleType = {
 
 export const menu: menuNav[] = [
     {
+        id: 0,
+        title: "Home",
+        path: "/",
+    },
+    {
         id: 1,
         title: "Projects",
         path: "/projects",

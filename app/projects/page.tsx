@@ -1,6 +1,25 @@
+import type { Metadata } from "next";
+
 import { Project } from "../utils/utility";
 import Card from "../components/ui/card";
 import { MotionDiv } from "../components/motion-wrapper";
+
+export const metadata: Metadata = {
+  title: "Projects | Novskidev.cloud",
+  description:
+    "A curated collection of Novian's software projects, from AI-assisted tools to education-focused web apps and experiments.",
+  openGraph: {
+    title: "Projects | Novskidev.cloud",
+    description:
+      "Explore open-source and client projects by Novian Nadari, showcasing React, Next.js, Astro, Svelte, and AI-powered solutions.",
+    url: "https://novskidev.cloud/projects",
+    type: "website",
+    siteName: "Novskidev.cloud",
+  },
+  alternates: {
+    canonical: "https://novskidev.cloud/projects",
+  },
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },

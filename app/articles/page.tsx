@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
+
 import { getAllArticles } from "../utils/mdx";
 import ArticleList from "../components/ui/articleList";
 import { formatDate } from "../components/articles";
 import { MotionDiv } from "../components/motion-wrapper";
+
+export const metadata: Metadata = {
+  title: "Articles | Novskidev.cloud",
+  description:
+    "Thoughts on software engineering, teaching, and applied AI from Novian Nadari – tutorials, guides, and personal reflections.",
+  openGraph: {
+    title: "Articles | Novskidev.cloud",
+    description:
+      "Read the latest articles by Novian covering Next.js, education technology, AI workflows, and developer productivity.",
+    url: "https://novskidev.cloud/articles",
+    type: "article",
+    siteName: "Novskidev.cloud",
+  },
+  alternates: {
+    canonical: "https://novskidev.cloud/articles",
+  },
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },

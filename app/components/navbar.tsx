@@ -26,15 +26,23 @@ export default function Navbar() {
         </div>
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 flex-grow justify-end items-center">
-          {menu.map((item) => (
-            <Link
-              key={item.id}
-              href={`${item.path}`}
-              className={`font-semibold text-base text-gray-900 dark:text-white hover:scale-110 dark:hover:scale-110 transition duration-300 ease-in-out px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-verdigris ${pathname === item.path ? 'text-verdigris' : ''}`}
-            >
-              {item.title}
-            </Link>
-          ))}
+          {menu.map((item) => {
+            const isHome = item.path === '/';
+            const isActive = isHome
+              ? pathname === '/'
+              : pathname === item.path || pathname.startsWith(`${item.path}/`);
+
+            return (
+              <Link
+                key={item.id}
+                href={item.path}
+                aria-current={isActive ? 'page' : undefined}
+                className={`font-semibold text-base text-gray-900 dark:text-white hover:scale-110 dark:hover:scale-110 transition duration-300 ease-in-out px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-verdigris ${isActive ? 'text-verdigris dark:text-verdigris' : ''}`}
+              >
+                {item.title}
+              </Link>
+            );
+          })}
         </div>
         {/* Theme Toggle & Mobile Menu Button */}
         <div className="flex items-center gap-2 sm:gap-4">
@@ -57,16 +65,24 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col w-full mt-2 rounded-md space-y-2 p-4 bg-white/95 dark:bg-gray-900/95 shadow-lg animate-fade-in">
-          {menu.map((item) => (
-            <Link
-              key={item.id}
-              href={`${item.path}`}
-              className={`block text-base text-gray-900 dark:text-white font-semibold px-2 py-2 rounded hover:bg-verdigris/10 dark:hover:bg-verdigris/20 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-verdigris ${pathname === item.path ? 'text-verdigris' : ''}`}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.title}
-            </Link>
-          ))}
+          {menu.map((item) => {
+            const isHome = item.path === '/';
+            const isActive = isHome
+              ? pathname === '/'
+              : pathname === item.path || pathname.startsWith(`${item.path}/`);
+
+            return (
+              <Link
+                key={item.id}
+                href={item.path}
+                aria-current={isActive ? 'page' : undefined}
+                className={`block text-base text-gray-900 dark:text-white font-semibold px-2 py-2 rounded hover:bg-verdigris/10 dark:hover:bg-verdigris/20 transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-verdigris ${isActive ? 'text-verdigris' : ''}`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.title}
+              </Link>
+            );
+          })}
         </div>
       )}
     </nav>

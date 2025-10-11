@@ -1,7 +1,8 @@
 'use client';
 
-import profilpic from "../../public/images/novski.png"
+import profilpic from "../../public/images/novski.png";
 import Image from "next/image";
+import Link from "next/link";
 import { FaReact, FaPython } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiAstro, SiSvelte, SiVuedotjs, SiSupabase, SiExpress } from "react-icons/si";
@@ -49,6 +50,25 @@ function Hero() {
                     Helping businesses and individuals solve problems with clean code, <br className="hidden sm:block"/> 
                     innovative solutions, and engaging education.
                 </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.75, duration: 0.7 }}
+                    className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2"
+                >
+                    <a
+                        href="mailto:novskidev@gmail.com"
+                        className="rounded-full bg-verdigris px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-bondi_blue sm:text-base"
+                    >
+                        Let&apos;s Collaborate
+                    </a>
+                    <Link
+                        href="#projects"
+                        className="rounded-full border border-verdigris px-5 py-2 text-sm font-semibold text-verdigris transition hover:-translate-y-0.5 hover:bg-verdigris/10 dark:text-[#56D3A8] dark:border-[#56D3A8] dark:hover:bg-[#56D3A8]/10 sm:text-base"
+                    >
+                        View My Projects
+                    </Link>
+                </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

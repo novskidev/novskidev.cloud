@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
+
 import Card from "../components/ui/card";
 import { MotionDiv } from "../components/motion-wrapper";
+
+export const metadata: Metadata = {
+  title: "Products | Novskidev.cloud",
+  description:
+    "Digital resources by Novian, including e-books, AI-powered teaching aids, GPTs, and community offerings for educators.",
+  openGraph: {
+    title: "Products | Novskidev.cloud",
+    description:
+      "Browse Novian's digital products for teachers and developers – from AI prompt collections to interactive learning materials.",
+    url: "https://novskidev.cloud/product",
+    type: "website",
+    siteName: "Novskidev.cloud",
+  },
+  alternates: {
+    canonical: "https://novskidev.cloud/product",
+  },
+};
 
 const products = [
 	{ 
