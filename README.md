@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Novskidev.cloud
+
+Personal portfolio and blog website built with Next.js 15, showcasing projects, articles, and ideas.
+
+## Features
+
+- Modern, responsive design with dark/light theme support
+- MDX-powered blog with GitHub Flavored Markdown
+- SEO optimized with dynamic sitemap and robots.txt
+- Static site generation for optimal performance
+- Smooth animations with Framer Motion
+- Reading time estimates for articles
+- Social sharing buttons
+- Custom fonts and styling with Tailwind CSS
+
+## Tech Stack
+
+- **Framework**: Next.js 15.3.3 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Content**: MDX with `@next/mdx`
+- **Animations**: Framer Motion
+- **Icons**: Lucide React & React Icons
+- **Package Manager**: pnpm
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- pnpm (or npm/yarn)
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Copy environment variables:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Update `.env.local` with your site URL
 
-## Learn More
+### Development
 
-To learn more about Next.js, take a look at the following resources:
+Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## Deploy on Vercel
+### Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create an optimized production build:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm build
+```
+
+### Start Production Server
+
+```bash
+pnpm start
+```
+
+## Project Structure
+
+```
+├── app/                    # Next.js app directory
+│   ├── about/             # About page
+│   ├── articles/          # Blog articles
+│   ├── components/        # React components
+│   ├── product/           # Product pages
+│   ├── projects/          # Projects showcase
+│   ├── style/             # Global styles
+│   └── utils/             # Utility functions
+├── content/               # MDX content files
+│   └── articles/         # Blog post content
+├── public/                # Static assets
+│   ├── fonts/            # Custom fonts
+│   ├── icon/             # Icons
+│   └── images/           # Images
+└── ...config files
+```
+
+## Writing Articles
+
+Create a new MDX file in `content/articles/`:
+
+```mdx
+---
+title: "Your Article Title"
+date: "2025-01-01"
+description: "Brief description"
+---
+
+Your content here...
+```
+
+## License
+
+This project is for personal use.
+
+## Contact
+
+Visit [novskidev.cloud](https://novskidev.cloud) for more information.

@@ -32,13 +32,21 @@ export const metadata: Metadata = {
     default: "Novskidev.cloud | Novian's Portfolio",
     template: "%s | Novskidev.cloud",
   },
-  description: "Portofolio Website to Share my Ideas",
+  description: "Portfolio Website to Share my Ideas",
   openGraph: {
     type: "website",
     siteName: "Novskidev.cloud",
     url: BASE_URL,
     title: "Novskidev.cloud | Novian's Portfolio",
-    description: "Portofolio Website to Share my Ideas",
+    description: "Portfolio Website to Share my Ideas",
+    images: [
+      {
+        url: `${BASE_URL}/images/novski.png`,
+        width: 1200,
+        height: 630,
+        alt: "Novskidev.cloud - Novian's Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -48,6 +56,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    types: {
+      "application/rss+xml": `${BASE_URL}/feed.xml`,
+    },
   },
 };
 
