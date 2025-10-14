@@ -1,28 +1,22 @@
+'use client';
+
 import ArticleList from "./ui/articleList";
 import { type ArticleMetadata } from "../utils/mdx";
-
-export const formatDate = (dateString: string) => {
-    if (!dateString) {
-        return "";
-    }
-
-    const date = new Date(dateString);
-    if (Number.isNaN(date.getTime())) {
-        return dateString;
-    }
-
-    return date.toLocaleDateString("id-ID", { year: "numeric", month: "long" });
-};
+import { formatDate } from "../utils/date";
+import { useFadeInUp, useFadeInStagger } from "../hooks/useScrollAnimation";
 
 interface ArticlesProps {
     articles: ArticleMetadata[];
 }
 
 function Articles({ articles }: ArticlesProps) {
-    return (  
+    const headerRef = useFadeInUp();
+    const articlesRef = useFadeInStagger('.article-item', { start: 'top 80%' });
+
+    return (
         <section className="w-full bg-[#F7F7F7] py-16 sm:py-24 dark:bg-[#1A1A1A]">
             <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 sm:px-6 lg:px-8">
-                <header className="space-y-3 text-center sm:text-left">
+                <header ref={headerRef} className="space-y-3 text-center sm:text-left">
                     <h1 className="font-pally text-3xl font-bold text-verdigris dark:text-[#56D3A8] sm:text-4xl lg:text-5xl">
                         Articles
                     </h1>
@@ -34,15 +28,16 @@ function Articles({ articles }: ArticlesProps) {
                     </h2>
                 </header>
 
-                <div className="grid gap-4 sm:gap-6">
+                <div ref={articlesRef} className="grid gap-4 sm:gap-6">
                     {articles.slice(0, 3).map((article) => (
-                        <ArticleList
-                            key={article.slug}
-                            title={article.title}
-                            date={formatDate(article.date)}
-                            description={article.description}
-                            link={`/articles/${article.slug}`}
-                        />
+                        <div key={article.slug} className="article-item">
+                            <ArticleList
+                                title={article.title}
+                                date={formatDate(article.date)}
+                                description={article.description}
+                                link={`/articles/${article.slug}`}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

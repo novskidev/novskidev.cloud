@@ -1,6 +1,6 @@
 import { getArticleBySlug, getAllArticles } from '@/app/utils/mdx';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { formatDate } from '@/app/components/articles';
+import { formatDate } from '@/app/utils/date';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Utterances from '@/app/components/utterances';

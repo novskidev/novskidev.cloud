@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { getAllArticles } from "../utils/mdx";
 import ArticleList from "../components/ui/articleList";
-import { formatDate } from "../components/articles";
+import { formatDate } from "../utils/date";
 import { MotionDiv } from "../components/motion-wrapper";
 
 export const metadata: Metadata = {

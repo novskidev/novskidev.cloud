@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import ArticleList from './ui/articleList';
-import { formatDate } from './articles';
+import { formatDate } from '../utils/date';
 import type { ArticleMetadata as Article } from '../utils/mdx';
 
 const containerVariants = {
