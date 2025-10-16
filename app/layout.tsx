@@ -28,11 +28,17 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://novskidev.cloud";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  applicationName: "Novskidev.cloud",
   title: {
     default: "Novskidev.cloud | Novian's Portfolio",
     template: "%s | Novskidev.cloud",
   },
   description: "Portfolio Website to Share my Ideas",
+  manifest: "/manifest.webmanifest",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F7F7F7" },
+    { media: "(prefers-color-scheme: dark)", color: "#1A1A1A" },
+  ],
   openGraph: {
     type: "website",
     siteName: "Novskidev.cloud",
@@ -52,7 +58,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    icon: "/favicon1.ico",
+    icon: [
+      { url: "/favicon1.ico" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180" }],
   },
   alternates: {
     canonical: BASE_URL,
