@@ -2,8 +2,16 @@ import ArticleList from "./ui/articleList";
 import { type ArticleMetadata } from "../utils/mdx";
 
 export const formatDate = (dateString: string) => {
+    if (!dateString) {
+        return "";
+    }
+
     const date = new Date(dateString);
-    return date.toLocaleDateString("en-EN", { year: "numeric", month: "long" });
+    if (Number.isNaN(date.getTime())) {
+        return dateString;
+    }
+
+    return date.toLocaleDateString("id-ID", { year: "numeric", month: "long" });
 };
 
 interface ArticlesProps {
